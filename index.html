@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dogApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://dog.ceo/api/breeds/image/random">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://dog.ceo/api/breeds/image/random"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script defer src="../randomDog/index.js"></script>
+
+    <title>Gerando Imagens Aleatorias</title>
+
+
+</head>
+
+<body>
+
+    <button class="imgButton" id="refreshButton">Atualizar</button>
+    
+    <div ng-controller="DogController as vm" class="container-grid">        
+
+        <img ng-src="{{ vm.dogImageUrl }}" class="imgDog" id="DogImage" alt="Random dog image">
+
+        <img ng-src="{{ vm.dogImageUrl2 }}" class="imgDog2" id="DogImage2" alt="Random dog image">
+
+        <img ng-src="{{ vm.dogImageUrl3 }}" class="imgDog3" id="DogImage3" alt="Random dog image">
+
+    </div>
+    
+</body>
+
+</html>
